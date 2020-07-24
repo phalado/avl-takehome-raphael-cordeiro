@@ -1,0 +1,11 @@
+.MainPanel {
+  width: 80%;
+  margin: 2%;
+  padding: 2%;
+  color: white;
+}
+
+.Problem {
+  display: flex;
+  align-items: center;
+}
