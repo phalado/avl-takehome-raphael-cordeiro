@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Dropdown from 'react-dropdown';
 import PropTypes from 'prop-types';
 import ProblemContainer from './ProblemContainer';
@@ -7,10 +7,9 @@ import '../Styles/MainPanel.css';
 
 const MainPanel = props => {
   const {
-    problem, result, handleSetResult, def, handleChangeTopic,
+    problem, result, handleSetResult, handleChangeTopic,
   } = props;
   const options = ['All Topics', 'Algebra', 'Geometry', 'Trigonometry', 'Arithmetic'];
-  const [defaultOption] = useState(options.indexOf(def));
 
   const handleChange = event => {
     handleChangeTopic(event.target.value);
@@ -36,7 +35,6 @@ MainPanel.propTypes = {
   problem: PropTypes.objectOf(PropTypes.any).isRequired,
   result: PropTypes.arrayOf(PropTypes.any).isRequired,
   handleSetResult: PropTypes.func.isRequired,
-  def: PropTypes.string.isRequired,
   handleChangeTopic: PropTypes.func.isRequired,
 };
 
